@@ -1,0 +1,40 @@
+const Discord = require('discord.js')
+const osu = require('node-osu');
+const api = new osu.Api("95206b2b9ea61afbc45117d5831c1ff08bc4cf81" , {
+    notFoundAsError: true,
+    completeScores: false 
+})
+
+module.exports = {
+  name: "osu",
+  category: "utilitaire",
+description: "Infos d'un joueur osu!",
+usage: "[commande | username]",
+run: async (bot, message, args) => {
+//command
+
+let username = args[0]
+  
+  
+if (!args[0]) return message.channel.send('Mettez un utilisateur correct ! (osu!)')
+
+api.getUser({u: username}).then(user => {
+const embed = new Discord.MessageEmbed()
+.setTitle('Informations du joueur: ')
+.setThumbnail(`http://s.ppy.sh/a/${user.id}}`)
+.setColor("00ff00")
+.addField('Pseudo: ', user.name)
+.addField('PP: ', Math.round(user.pp.raw))
+.addField('Rank: ', user.pp.rank)
+.addField('Level: ', Math.round(user.level))
+.addField('Pays: ', user.country)
+.addField('Classement pays', user.pp.countryRank)
+.addField('Temps de jeu: ', user.counts.plays)
+.addField('Accuracy', `${user.accuracyFormatted}`)
+.setFooter(Demande de ' + message.author.tag, message.author.avatarURL)
+message.channel.send(embed)
+
+})
+
+}
+};

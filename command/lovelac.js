@@ -1,0 +1,111 @@
+const Discord = require('discord.js');
+
+module.exports.run = (client, message, args) => {
+
+let number = Math.floor(Math.random() * 100)
+
+var member = message.mentions.members.first();
+if (!member) return message.channel.send("Veuillez mentionner une personne.") 
+var embedA = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setDescription("Euh, en dessous de 10% y'a rien a dire vous devez rester potes, rien de plus.")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+
+var embedB = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setDescription("C'est très bas quand même :p faudrait changer de partenaire.")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+
+var embedC = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setDescription("C'est très limite comme score, vous pouvez rester amis peut être ?")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+
+var embedD = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart:  `)
+.setDescription("Ouille, c'est en dessous de la moyenne mais bien entendu le score peut changer dans tout les cas !")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+
+var embedE = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setDescription("Aïe, c'est quasi limite mais ! c'est en dessus de la moyenne, c'est déjà très bien !")
+.setTimestamp()
+.setFooter(client.user.username)
+var embedF = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setDescription("Wow, n'hésitez pas a tenté le coup, vous avez beaucoup de chance de réussir :)")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+var embedG = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setDescription("Proche du moyen, mais mais mais, le score peu toujours monter !")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+
+var embedH = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setDescription("Vous avez toutes vos chances. hehe !")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+var embedI = new Discord.MessageEmbed()
+
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart: `)
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setDescription("C'est un très beau score ! Hésitez pas a faire connaissance l'un lautre :).")
+.setTimestamp()
+.setFooter(client.user.username)
+var embedJ = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart:  `)
+.setDescription("Waaaaa ! Quel magnifique score ! Continuez comme ça :).")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+var embedK = new Discord.MessageEmbed()
+.setColor("RANDOM")
+.setTitle(`${member.user.username} +  ${message.author.username}  = ${number}% :heart:  `)
+.setDescription("Vous êtes vraiment fait l'un pour l'autre ! n'hésitez pas ! ")
+.setImage("https://tenor.com/view/milk-and-mocha-hug-cute-kawaii-love-gif-12535134.gif")
+.setTimestamp()
+.setFooter(client.user.username)
+if(number <= 0) return message.channel.send("Rien, nada aucune chance :p.");
+if(number > 0 && number <= 10) return message.channel.send(embedA)
+if(number > 10 && number <= 20) return message.channel.send(embedB)
+if(number > 20 && number <= 30) return message.channel.send(embedC)
+if(number > 30 && number <= 40) return message.channel.send(embedD)
+if(number > 40 && number <= 50) return message.channel.send(embedE)
+if(number > 50 && number <= 60) return message.channel.send(embedF)
+if(number > 60 && number <= 70) return message.channel.send(embedG)
+if(number > 70 && number <= 80) return message.channel.send(embedH)
+if(number > 80 && number <= 90) return message.channel.send(embedI)
+if(number > 90 && number <= 100) return message.channel.send(embedJ)
+if(number => 100 && number <= 100) return message.channel.send(embedE)
+
+
+}
+
+module.exports.help = {
+    name: 'lc',
+    description: "Mesurez votre amour avec la peronne mentionnée <3",
+};

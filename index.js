@@ -21,7 +21,7 @@ const fetch = require("node-fetch");
 const osu = require('node-osu');
 const request = require('request')
 const warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
-client.login("NzA3NTM5MTE1MzEwMTg2NTE2.XrKSAw.hTUSGXG34zNzXHGU2j_uTj0MtSg");
+client.login(".");
 client.commands = new Discord.Collection();
 client.cooldowns = new Discord.Collection();
 
